@@ -315,7 +315,7 @@ export default function Home() {
         ) : (
           <button
             title="Unmute audio"
-            className="bg-white py-1 px-1 mx-4"
+            className="py-1 px-1 mx-4"
             onClick={handleUnmuteClick}
           >
             <SpeakerOffIcon />
