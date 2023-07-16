@@ -17,7 +17,7 @@ import {
   SetStateAction,
 } from "react";
 
-export function SpeakerOnIcon() {
+function SpeakerOnIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -36,7 +36,7 @@ export function SpeakerOnIcon() {
   );
 }
 
-export function SpeakerOffIcon() {
+function SpeakerOffIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -55,7 +55,7 @@ export function SpeakerOffIcon() {
   );
 }
 
-export function EyeIcon() {
+function EyeIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -79,7 +79,7 @@ export function EyeIcon() {
   );
 }
 
-export function MegaphoneIcon() {
+function MegaphoneIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -98,9 +98,9 @@ export function MegaphoneIcon() {
   );
 }
 
-export function useBuzzSound() {}
+function useBuzzSound() {}
 
-export function useStateWithRef<TState>(
+function useStateWithRef<TState>(
   initialValue: TState,
 ): [TState, Dispatch<SetStateAction<TState>>, MutableRefObject<TState>] {
   const [value, setValue] = useState<TState>(initialValue);
