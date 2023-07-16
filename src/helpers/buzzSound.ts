@@ -1,6 +1,6 @@
 // The browser will limit the number of concurrent audio contexts
 // So be sure to re-use them whenever you can
-const myAudioContext = new AudioContext();
+let myAudioContext: AudioContext | undefined = undefined;
 let lastOscillatorNode: OscillatorNode | undefined = undefined;
 
 /**
@@ -18,6 +18,9 @@ export function startBuzz({
   volume = 70,
   onEnd = () => {},
 } = {}) {
+  if (myAudioContext === undefined) {
+    myAudioContext = new AudioContext();
+  }
   if (lastOscillatorNode !== undefined) {
     lastOscillatorNode.stop(myAudioContext.currentTime + duration * 0.001);
     return {
