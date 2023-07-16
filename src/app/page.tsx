@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import Image from "next/image";
 import {
   TParsedDMMResponse,
@@ -292,7 +293,7 @@ export default function Home() {
           <span className="mx-2 mb-2 sm:mb-0">Voice:</span>
           <select
             name="voice"
-            className="mx-2 px-1 border-gray-200 border-2 border-solid rounded-sm"
+            className="mx-2 px-1 border-gray-200 border-2 border-solid rounded-sm bg-white text-black dark:bg-black dark:text-white"
             value={selectedVoice}
             onChange={(e) => setSelectedVoice(e.target.value)}
           >
@@ -306,7 +307,7 @@ export default function Home() {
         {!isMute ? (
           <button
             title="Mute audio"
-            className="bg-white text-gray-500 py-1 px-1 mx-4"
+            className="py-1 px-1 mx-4"
             onClick={handleMuteClick}
           >
             <SpeakerOnIcon />
@@ -314,7 +315,7 @@ export default function Home() {
         ) : (
           <button
             title="Unmute audio"
-            className="bg-white text-red-400 py-1 px-1 mx-4"
+            className="bg-white py-1 px-1 mx-4"
             onClick={handleUnmuteClick}
           >
             <SpeakerOffIcon />
