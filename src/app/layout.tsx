@@ -4,7 +4,7 @@ import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const PRODUCTION_URL = "https://bluetooth-speaker.netlify.app";
+const PRODUCTION_URL = "https://multimeter-speaker.netlify.app";
 const DEPLOY_URL = process.env.DEPLOY_URL || PRODUCTION_URL;
 
 const title = "Multimeter speaker";
