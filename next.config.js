@@ -1,5 +1,8 @@
 const withPWA = require("next-pwa")({
   dest: "public",
+  skipWaiting: true,
+  register: true,
+  sw: "/sw.js",
 });
 
 /** @type {import('next').NextConfig} */
