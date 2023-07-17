@@ -15,6 +15,7 @@
 - "Announced value" is shown in UI and also spoken using Web Speech api. The voice model used can be changed in UI (choice depends on OS).
 - When multimeter's Buzz symbol is ON and DIODE symbol is OFF, that indicates multimeter is buzzing. The app also generates a tone of 2800 Hz with 70% volume to make the buzz more audible. (Actual multimeter uses 2150 Hz, but I like this one better.)
 - Doesn't work on IOS, because Web Bluetooth Api is not supported. Works on Android, Mac, Windows.
+- Supports PWA app installation and offline mode.
 
 ## Todo
 
