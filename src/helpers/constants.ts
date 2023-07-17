@@ -78,3 +78,5 @@ export const LCD_SYMBOL_BIT_POSITION_MAP = {
 };
 
 export type KNOWN_SYMBOLS = keyof typeof LCD_SYMBOL_BIT_POSITION_MAP;
+
+export const AUTO_RECONNECT_INTERVAL_MS = 5000;
