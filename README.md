@@ -16,11 +16,12 @@
 - When multimeter's Buzz symbol is ON and DIODE symbol is OFF, that indicates multimeter is buzzing. The app also generates a tone of 2800 Hz with 70% volume to make the buzz more audible. (Actual multimeter uses 2150 Hz, but I like this one better.)
 - Doesn't work on IOS, because Web Bluetooth Api is not supported. Works on Android, Mac, Windows.
 - Supports PWA app installation and offline mode.
+- Added automatic BLE reconnect feature (if connection is lost from DMM side). If user clicks "Disconnect" button manually, reconnect is temporarily disabled till next reconnect.
 
 ## Todo
 
 - Support other size multimeters from Aneng
-- Allow configuring volume, pitch, buzz volume, buzz frequency
+- Allow configuring volume, pitch, buzz volume, buzz frequency, auto re-connect
 - Allow custom template
 
 ## Contribution
