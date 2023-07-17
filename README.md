@@ -1,6 +1,30 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# [Multimeter speaker](https://multimeter-speaker.netlify.app/)
 
-## Getting Started
+[![Netlify Status](https://api.netlify.com/api/v1/badges/5e692fc8-5bae-44c4-b8b4-ba0903bfe768/deploy-status)](https://multimeter-speaker.netlify.app/)
+
+![Screenshot](./screenshot.png)
+
+## Details
+
+- Connects with Aneng BLE Multimeters using Bluetooth and announces values using Web Speech api.
+- Reciprocates buzz with a tone of 2800 Hz.
+- Only works with Aneng Big multimeters at the moment (Aneng-9002, BSIDE ZT-300AB, ZOYI ZT-300AB, BABATools AD-900).
+- Thanks to @ludwich66 for decoding the protocol at https://github.com/ludwich66/Bluetooth-DMM/wiki/Protocol-all-Variants
+- "Live value" shows instant value received from DMM.
+- Live value is then debounced and repeat values are removed to get "Announced value".
+- "Announced value" is shown in UI and also spoken using Web Speech api. The voice model used can be changed in UI (choice depends on OS).
+- When multimeter's Buzz symbol is ON and DIODE symbol is OFF, that indicates multimeter is buzzing. The app also generates a tone of 2800 Hz with 70% volume to make the buzz more audible. (Actual multimeter uses 2150 Hz, but I like this one better.)
+- Doesn't work on IOS, because Web Bluetooth Api is not supported. Works on Android, Mac, Windows.
+
+## Todo
+
+- Support other size multimeters from Aneng
+- Allow configuring volume, pitch, buzz volume, buzz frequency
+- Allow custom template
+
+## Contribution
+
+**It uses Next.js framework with @ducanh2912/next-pwa for offline support. It is deployed on Netlify.**
 
 First, run the development server:
 
@@ -14,21 +38,6 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Help
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Please raise an issue if your Aneng DMM is not supported properly. Feel free to contribute changes.
