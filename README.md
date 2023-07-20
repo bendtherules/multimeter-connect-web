@@ -21,6 +21,8 @@
 ## Todo
 
 - Support other size multimeters from Aneng
+- Stop old speech before uttering new speech (based on overlap??)
+- Ignore less significant digits??
 - Allow configuring volume, pitch, buzz volume, buzz frequency, auto re-connect
 - Allow custom template
 
